@@ -17,17 +17,17 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
-      <profile default="false" name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+      <profile default="false" name="Annotation profile for thecaptains.domain" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="thecaptains.domain" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="KitchenCaptain" target="1.5" />
-      <module name="thecaptains.domain" target="1.5" />
+      <module name="KitchenCaptain" target="1.7" />
+      <module name="thecaptains.domain" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
