@@ -15,24 +15,30 @@ public class CreateIT {
 
     @Test
     public void test() {
-        Ingredient ingredient = new Ingredient();
-        ingredient.setName("Spaghetti");
-        ingredient.setDescription("Idealses italienisches Nudelgericht");
-
         Category category = new Category();
         category.setName("Beilage");
-        category.setType(1);
 
-        List<Category> categories = new ArrayList<Category>();
-        categories.add(category);
+        Ingredient ingredient = new Ingredient();
+        ingredient.setName("Spaghetti");
 
-        ingredient.setCategories(categories);
+        Ingredient ingredient2 = new Ingredient();
+        ingredient2.setName("Speck");
+
+        List<Ingredient> ingredients = new ArrayList<Ingredient>();
+        ingredients.add(ingredient);
+        ingredients.add(ingredient2);
+
+        category.setIngredients(ingredients);
+
+        ingredient.setCategory(category);
+        ingredient2.setCategory(category);
 
         EntityManager em = Persistence.createEntityManagerFactory(
                 "thecaptains.domain").createEntityManager();
 
         em.getTransaction().begin();
-        em.persist(category);
+        em.persist(ingredient);
         em.getTransaction().commit();
+
     }
 }

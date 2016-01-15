@@ -1,23 +1,16 @@
 package model;
 
 import javax.persistence.*;
-import java.util.List;
-
-import static javax.persistence.CascadeType.ALL;
-import static javax.persistence.GenerationType.IDENTITY;
 
 /**
- * Created by User on 27.10.2015.
+ * Created by User on 15.01.2016.
  */
 @Entity
 public class Ingredient {
-    @Id
-    @GeneratedValue(strategy = IDENTITY)
     private long id;
 
-    private List<Category> categories;
-
-
+    @GeneratedValue
+    @Id
     public long getId() {
         return id;
     }
@@ -28,9 +21,6 @@ public class Ingredient {
 
     private String name;
 
-    public Ingredient(){
-        super();
-    }
     @Basic
     public String getName() {
         return name;
@@ -40,22 +30,14 @@ public class Ingredient {
         this.name = name;
     }
 
-    private String description;
+    private Category category;
 
-    @Basic
-    public String getDescription() {
-        return description;
+    @ManyToOne(cascade = CascadeType.ALL)
+    public Category getCategory() {
+        return category;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-
-    public List<Category> getCategories() {
-        return categories;
-    }
-    public void setCategories(List<Category> categories) {
-        this.categories = categories;
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }
