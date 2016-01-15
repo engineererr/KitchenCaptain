@@ -1,6 +1,6 @@
-package repository;
+package ch.kitchencaptain.repository;
 
-import model.Ingredient;
+import ch.kitchencaptain.model.Ingredient;
 import org.springframework.data.repository.CrudRepository;
 
 /**

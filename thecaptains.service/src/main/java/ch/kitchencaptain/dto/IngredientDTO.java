@@ -1,4 +1,4 @@
-package dto;
+package ch.kitchencaptain.dto;
 
 import java.io.Serializable;
 
@@ -10,8 +10,7 @@ public class IngredientDTO implements Serializable {
 
 	   
 	private Long id;
-	private String firstname;
-	private String lastname;
+	private String name;
 	private static final long serialVersionUID = 1L;
 
 	public IngredientDTO() {
@@ -24,19 +23,12 @@ public class IngredientDTO implements Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}   
-	public String getFirstname() {
-		return this.firstname;
+	public String getName() {
+		return this.name;
 	}
 
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+	public void setName(String name) {
+		this.name = name;
 	}   
-	public String getLastname() {
-		return this.lastname;
-	}
 
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
-	}
-   
 }

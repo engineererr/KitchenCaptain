@@ -2,16 +2,7 @@
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
 
     <persistence-unit name="thecaptains.domain">
-        <class>model.Ingredient</class>
-        <class>model.Category</class>
-
-        <properties>
-            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:h2:~/kitchencaptainDB"/>
-            <property name="javax.persistence.jdbc.user" value="captain"/>
-            <property name="javax.persistence.jdbc.password" value="captain"/>
-            <property name="eclipselink.ddl-generation.output-mode" value="database"/>
-            <property name="eclipselink.ddl-generation" value="create-tables"/>
-        </properties>
+        <class>ch.kitchencaptain.model.Ingredient</class>
+        <class>ch.kitchencaptain.model.Category</class>
     </persistence-unit>
 </persistence>

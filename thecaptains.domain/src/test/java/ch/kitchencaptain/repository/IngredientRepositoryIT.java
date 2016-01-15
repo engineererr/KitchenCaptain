@@ -1,14 +1,17 @@
-package model; /**
- * Created by User on 27.10.2015.
- */
-import model.Ingredient;
+package ch.kitchencaptain.repository;
+
+import ch.kitchencaptain.model.Ingredient;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import repository.IngredientRepository;
 
 import javax.inject.Inject;
+
+/**
+ * Created by User on 15.01.2016.
+ */
+
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/persistenceContext.xml")
@@ -17,24 +20,21 @@ public class IngredientRepositoryIT {
     private IngredientRepository ingredientRepository;
 
     @Test
-    public void test() {
-        // Create
+    public void test(){
         Ingredient newIngredient = new Ingredient();
-        newIngredient.setName("Test");
+        newIngredient.setName("Tomato");
         ingredientRepository.save(newIngredient);
 
-        // Read
         Ingredient readIngredient = ingredientRepository.findOne(newIngredient.getId());
         org.junit.Assert.assertTrue(newIngredient.getName().equals(readIngredient.getName()));
 
-        // Update
-        readIngredient.setName("Test2");
+        readIngredient.setName("Banana");
         readIngredient = ingredientRepository.save(readIngredient);
-        Ingredient updatedBook = ingredientRepository.findOne(readIngredient.getId());
-        org.junit.Assert.assertTrue(readIngredient.getName().equals(updatedBook.getName()));
-        // Delete
-        ingredientRepository.delete(updatedBook);
-        Ingredient deletedBook = ingredientRepository.findOne(readIngredient.getId());
-        org.junit.Assert.assertNull(deletedBook);
+        Ingredient updatedIngredient = ingredientRepository.findOne(readIngredient.getId());
+        org.junit.Assert.assertTrue(readIngredient.getName().equals(updatedIngredient.getName()));
+
+        ingredientRepository.delete(updatedIngredient);
+        Ingredient deletedIngredient = ingredientRepository.findOne(readIngredient.getId());
+        org.junit.Assert.assertNull(deletedIngredient);
     }
 }

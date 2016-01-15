@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>thecaptains.service</artifactId>
+    <artifactId>thecaptains.ch.kitchencaptain.service</artifactId>
     <name>theCaptains Service</name>
 
     <dependencies>

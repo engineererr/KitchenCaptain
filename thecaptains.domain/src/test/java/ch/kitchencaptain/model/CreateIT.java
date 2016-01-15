@@ -1,7 +1,9 @@
-package model; /**
+package ch.kitchencaptain.model; /**
  * Created by User on 27.10.2015.
  */
 
+import ch.kitchencaptain.model.Category;
+import ch.kitchencaptain.model.Ingredient;
 import org.junit.Test;
 
 import javax.persistence.EntityManager;

@@ -1,7 +1,6 @@
-package dto;
+package ch.kitchencaptain.dto;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * Entity implementation class for Entity: Book
@@ -13,7 +12,6 @@ public class CategoryDTO implements Serializable {
 	private Long id;
 	private String title;
 
-	private Date releaseDate;
 	private static final long serialVersionUID = 1L;
 	
 	private CategoryDTO category;
@@ -35,14 +33,8 @@ public class CategoryDTO implements Serializable {
 
 	public void setTitle(String title) {
 		this.title = title;
-	}   
-	public Date getReleaseDate() {
-		return this.releaseDate;
 	}
 
-	public void setReleaseDate(Date releaseDate) {
-		this.releaseDate = releaseDate;
-	}
 	public CategoryDTO getCategory() {
 		return category;
 	}

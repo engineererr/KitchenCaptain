@@ -1,4 +1,4 @@
-package model;
+package ch.kitchencaptain.model;
 
 import javax.persistence.*;
 import java.util.List;
@@ -8,15 +8,15 @@ import java.util.List;
  */
 @Entity
 public class Category {
-    private long id;
-
     @GeneratedValue
     @Id
-    public long getId() {
+    private java.lang.Long id;
+
+    public java.lang.Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(java.lang.Long id) {
         this.id = id;
     }
 

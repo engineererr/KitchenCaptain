@@ -1,4 +1,4 @@
-package model;
+package ch.kitchencaptain.model;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
