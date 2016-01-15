@@ -1,9 +1,7 @@
-/**
+package model; /**
  * Created by User on 27.10.2015.
  */
 
-import model.Category;
-import model.Ingredient;
 import org.junit.Test;
 
 import javax.persistence.EntityManager;

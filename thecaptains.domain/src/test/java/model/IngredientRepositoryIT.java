@@ -1,4 +1,4 @@
-/**
+package model; /**
  * Created by User on 27.10.2015.
  */
 import model.Ingredient;

@@ -1,4 +1,4 @@
-/**
+package model; /**
  * 
  */
 
@@ -15,7 +15,7 @@ import java.util.List;
  * @author rovi
  * 
  */
-public class ReadIT {
+public class UpdateIT {
 
 	@Test
 	public void test() {
@@ -27,8 +27,15 @@ public class ReadIT {
 		@SuppressWarnings("unchecked")
 		List<Ingredient> foundIngredients = q.getResultList();
 		Ingredient firstIngredient = foundIngredients.get(0);
-		Assert.assertTrue(firstIngredient.getName().equals("Spaghetti"));
 
+		// Write access needs a transaction
+		em.getTransaction().begin();
+		firstIngredient.setName("Penne");
+		em.getTransaction().commit();
+		// Entity is persisted automatically after commit because it is managed
+		// by jpa.
+
+		Assert.assertTrue(firstIngredient.getName().equals("Penne"));
 	}
 
 }

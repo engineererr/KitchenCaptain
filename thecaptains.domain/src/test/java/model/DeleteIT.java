@@ -1,9 +1,8 @@
-/**
+package model; /**
  * 
  */
 
 import model.Ingredient;
-import org.junit.Assert;
 import org.junit.Test;
 
 import javax.persistence.EntityManager;
@@ -15,7 +14,7 @@ import java.util.List;
  * @author rovi
  * 
  */
-public class UpdateIT {
+public class DeleteIT {
 
 	@Test
 	public void test() {
@@ -26,16 +25,13 @@ public class UpdateIT {
 		Query q = em.createQuery("select a from Ingredient a");
 		@SuppressWarnings("unchecked")
 		List<Ingredient> foundIngredients = q.getResultList();
-		Ingredient firstIngredient = foundIngredients.get(0);
+		Ingredient firstAuthor = foundIngredients.get(0);
+		// Assert.assertTrue(firstAuthor.getLastname().equals("Tolkien"));
 
 		// Write access needs a transaction
 		em.getTransaction().begin();
-		firstIngredient.setName("Penne");
+		em.remove(firstAuthor);
 		em.getTransaction().commit();
-		// Entity is persisted automatically after commit because it is managed
-		// by jpa.
-
-		Assert.assertTrue(firstIngredient.getName().equals("Penne"));
 	}
 
 }

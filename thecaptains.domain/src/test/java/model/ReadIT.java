@@ -1,8 +1,8 @@
-/**
+package model; /**
  * 
  */
 
-import model.Ingredient;
+import org.junit.Assert;
 import org.junit.Test;
 
 import javax.persistence.EntityManager;
@@ -14,7 +14,7 @@ import java.util.List;
  * @author rovi
  * 
  */
-public class DeleteIT {
+public class ReadIT {
 
 	@Test
 	public void test() {
@@ -25,13 +25,9 @@ public class DeleteIT {
 		Query q = em.createQuery("select a from Ingredient a");
 		@SuppressWarnings("unchecked")
 		List<Ingredient> foundIngredients = q.getResultList();
-		Ingredient firstAuthor = foundIngredients.get(0);
-		// Assert.assertTrue(firstAuthor.getLastname().equals("Tolkien"));
+		Ingredient firstIngredient = foundIngredients.get(0);
+		Assert.assertTrue(firstIngredient.getName().equals("Spaghetti"));
 
-		// Write access needs a transaction
-		em.getTransaction().begin();
-		em.remove(firstAuthor);
-		em.getTransaction().commit();
 	}
 
 }
