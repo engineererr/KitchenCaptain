@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="deployment">
+    <output-path>$PROJECT_DIR$/thecaptains.rest/web</output-path>
+    <root id="root">
+      <element id="module-output" name="thecaptains.parent" />
+    </root>
+  </artifact>
+</component>

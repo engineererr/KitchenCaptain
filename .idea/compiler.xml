@@ -22,7 +22,6 @@
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="thecaptains.domain" />
       </profile>
       <profile default="false" name="Annotation profile for service" enabled="true">
         <sourceOutputDir name="target\generated-sources\annotations" />
@@ -35,20 +34,20 @@
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="thecaptains.service" />
       </profile>
       <profile default="false" name="Annotation profile for thecaptains.rest" enabled="true">
         <sourceOutputDir name="target\generated-sources\annotations" />
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="thecaptains.rest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="KitchenCaptain" target="1.7" />
+      <module name="KitchenCaptain.parent" target="1.7" />
       <module name="service" target="1.7" />
       <module name="thecaptains.domain" target="1.7" />
+      <module name="thecaptains.parent" target="1.7" />
       <module name="thecaptains.rest" target="1.7" />
       <module name="thecaptains.service" target="1.7" />
     </bytecodeTargetLevel>

@@ -59,10 +59,10 @@
     </dependencies>
 
     <repositories>
-        <ch.kitchencaptain.model.repository>
+        <repository>
             <id>EclipseLink</id>
             <url>http://www.eclipse.org/downloads/download.php?r=1&amp;nf=1&amp;file=/rt/eclipselink/maven.repo</url>
-        </ch.kitchencaptain.model.repository>
+        </repository>
     </repositories>
 
 </project>
