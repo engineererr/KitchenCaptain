@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/thecaptains.domain/thecaptains.domain.iml" filepath="$PROJECT_DIR$/thecaptains.domain/thecaptains.domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/thecaptains.parent.iml" filepath="$PROJECT_DIR$/thecaptains.parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thecaptains.rest/thecaptains.rest.iml" filepath="$PROJECT_DIR$/thecaptains.rest/thecaptains.rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thecaptains.service/thecaptains.service.iml" filepath="$PROJECT_DIR$/thecaptains.service/thecaptains.service.iml" />
     </modules>
   </component>
 </project>
