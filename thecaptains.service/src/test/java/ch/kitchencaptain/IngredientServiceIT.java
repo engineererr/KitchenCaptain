@@ -24,18 +24,18 @@ public class IngredientServiceIT {
 
         // Create
         IngredientDTO newIngredient = new IngredientDTO();
-        newIngredient.setName("Test");
+        newIngredient.setTitle("Test");
         newIngredient = ingredientService.create(newIngredient);
 
         // Read
         IngredientDTO readIngredient = ingredientService.read(newIngredient.getId());
-        Assert.assertTrue(newIngredient.getName().equals(readIngredient.getName()));
+        Assert.assertTrue(newIngredient.getTitle().equals(readIngredient.getTitle()));
 
         // Update
-        readIngredient.setName("Test2");
+        readIngredient.setTitle("Test2");
         readIngredient = ingredientService.update(readIngredient);
         IngredientDTO updatedIngredient = ingredientService.read(readIngredient.getId());
-        Assert.assertTrue(readIngredient.getName().equals(updatedIngredient.getName()));
+        Assert.assertTrue(readIngredient.getTitle().equals(updatedIngredient.getTitle()));
 
         // Delete
         ingredientService.delete(updatedIngredient);

@@ -30,12 +30,12 @@ public class UpdateIT {
 
 		// Write access needs a transaction
 		em.getTransaction().begin();
-		firstIngredient.setName("Penne");
+		firstIngredient.setTitle("Penne");
 		em.getTransaction().commit();
 		// Entity is persisted automatically after commit because it is managed
 		// by jpa.
 
-		Assert.assertTrue(firstIngredient.getName().equals("Penne"));
+		Assert.assertTrue(firstIngredient.getTitle().equals("Penne"));
 	}
 
 }

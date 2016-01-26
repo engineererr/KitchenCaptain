@@ -27,7 +27,7 @@ public class ReadIT {
 		@SuppressWarnings("unchecked")
 		List<Ingredient> foundIngredients = q.getResultList();
 		Ingredient firstIngredient = foundIngredients.get(0);
-		Assert.assertTrue(firstIngredient.getName().equals("Spaghetti"));
+		Assert.assertTrue(firstIngredient.getTitle().equals("Spaghetti"));
 
 	}
 

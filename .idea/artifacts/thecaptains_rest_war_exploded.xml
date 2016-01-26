@@ -1,15 +1,18 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="thecaptains.rest:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/thecaptains_rest_war_exploded</output-path>
+    <output-path>$PROJECT_DIR$/thecaptains.rest/target/thecaptains.rest-0.0.1-SNAPSHOT</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="thecaptains.rest" />
-          <element id="module-output" name="thecaptains.domain" />
-          <element id="module-output" name="thecaptains.service" />
-          <element id="module-output" name="thecaptains.parent" />
         </element>
         <element id="directory" name="lib">
+          <element id="archive" name="thecaptains.service-0.0.1-SNAPSHOT.jar">
+            <element id="module-output" name="thecaptains.service" />
+          </element>
+          <element id="archive" name="thecaptains.domain-0.0.1-SNAPSHOT.jar">
+            <element id="module-output" name="thecaptains.domain" />
+          </element>
           <element id="library" level="project" name="Maven: org.eclipse.persistence:eclipselink:2.5.2" />
           <element id="library" level="project" name="Maven: org.eclipse.persistence:commonj.sdo:2.1.1" />
           <element id="library" level="project" name="Maven: org.eclipse.persistence:javax.persistence:2.1.0" />
@@ -37,10 +40,12 @@
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.13" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" />
-          <element id="library" level="project" name="JPA 2.0-JPA 2.0" />
         </element>
       </element>
-      <element id="javaee-facet-resources" facet="thecaptains.parent/web/Web" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/thecaptains.rest/target/thecaptains.rest-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="thecaptains.rest/web/Web" />
     </root>
   </artifact>
 </component>

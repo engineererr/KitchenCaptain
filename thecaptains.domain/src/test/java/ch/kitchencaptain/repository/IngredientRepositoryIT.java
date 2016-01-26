@@ -22,16 +22,16 @@ public class IngredientRepositoryIT {
     @Test
     public void test(){
         Ingredient newIngredient = new Ingredient();
-        newIngredient.setName("Tomato");
+        newIngredient.setTitle("Tomato");
         ingredientRepository.save(newIngredient);
 
         Ingredient readIngredient = ingredientRepository.findOne(newIngredient.getId());
-        org.junit.Assert.assertTrue(newIngredient.getName().equals(readIngredient.getName()));
+        org.junit.Assert.assertTrue(newIngredient.getTitle().equals(readIngredient.getTitle()));
 
-        readIngredient.setName("Banana");
+        readIngredient.setTitle("Banana");
         readIngredient = ingredientRepository.save(readIngredient);
         Ingredient updatedIngredient = ingredientRepository.findOne(readIngredient.getId());
-        org.junit.Assert.assertTrue(readIngredient.getName().equals(updatedIngredient.getName()));
+        org.junit.Assert.assertTrue(readIngredient.getTitle().equals(updatedIngredient.getTitle()));
 
         ingredientRepository.delete(updatedIngredient);
         Ingredient deletedIngredient = ingredientRepository.findOne(readIngredient.getId());

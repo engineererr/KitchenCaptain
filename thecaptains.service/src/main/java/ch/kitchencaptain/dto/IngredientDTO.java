@@ -10,7 +10,7 @@ public class IngredientDTO implements Serializable {
 
 	   
 	private Long id;
-	private String name;
+	private String title;
 	private static final long serialVersionUID = 1L;
 
 	public IngredientDTO() {
@@ -23,12 +23,12 @@ public class IngredientDTO implements Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}   
-	public String getName() {
-		return this.name;
+	public String getTitle() {
+		return this.title;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setTitle(String title) {
+		this.title = title;
 	}   
 
 }

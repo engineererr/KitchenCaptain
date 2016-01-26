@@ -2,8 +2,6 @@ package ch.kitchencaptain.model; /**
  * Created by User on 27.10.2015.
  */
 
-import ch.kitchencaptain.model.Category;
-import ch.kitchencaptain.model.Ingredient;
 import org.junit.Test;
 
 import javax.persistence.EntityManager;
@@ -16,13 +14,13 @@ public class CreateIT {
     @Test
     public void test() {
         Category category = new Category();
-        category.setName("Beilage");
+        category.setTitle("Beilage");
 
         Ingredient ingredient = new Ingredient();
-        ingredient.setName("Spaghetti");
+        ingredient.setTitle("Spaghetti");
 
         Ingredient ingredient2 = new Ingredient();
-        ingredient2.setName("Speck");
+        ingredient2.setTitle("Speck");
 
         List<Ingredient> ingredients = new ArrayList<Ingredient>();
         ingredients.add(ingredient);

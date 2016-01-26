@@ -17,6 +17,7 @@ import java.util.Collection;
  */
 @Named
 public class DefaultCategoryService implements CategoryService {
+
     @Inject
     private CategoryRepository categoryRepository;
 

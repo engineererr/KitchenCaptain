@@ -20,15 +20,15 @@ public class Category {
         this.id = id;
     }
 
-    private String name;
+    private String title;
 
     @Basic
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
 

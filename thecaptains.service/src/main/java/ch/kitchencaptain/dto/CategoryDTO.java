@@ -13,8 +13,8 @@ public class CategoryDTO implements Serializable {
 	private String title;
 
 	private static final long serialVersionUID = 1L;
-	
-	private CategoryDTO category;
+
+
 
 	public CategoryDTO() {
 		super();
@@ -34,12 +34,4 @@ public class CategoryDTO implements Serializable {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-
-	public CategoryDTO getCategory() {
-		return category;
-	}
-	public void setCategory(CategoryDTO author) {
-		this.category = category;
-	}
-   
 }
